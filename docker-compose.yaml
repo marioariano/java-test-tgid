@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: POSTGRES-TGID
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: java-test-tgid
+    ports:
+      - "5432:5432"
+    volumes:
+      - /path/para/salvar/os/dados:/var/lib/postgresql/data
